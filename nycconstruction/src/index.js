@@ -14,6 +14,10 @@ ReactDOM.render(
     document.getElementById("root")
   );
 
+
+  // DB pull from https://whispering-bayou-30290.herokuapp.com/api/property
+  // localhost:8080
+  
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

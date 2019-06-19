@@ -10,7 +10,9 @@ class Navigation extends Component {
                     <li><Link to="/">Home </Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/jobs">Job Listing </Link></li>
-                </ul>
+                    <li><Link to="/create">Create</Link></li>
+                    <li><Link to="/delete">Delete</Link></li>
+            </ul>                       
                 
             </div>
         );

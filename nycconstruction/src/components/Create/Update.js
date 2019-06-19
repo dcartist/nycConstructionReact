@@ -1,40 +1,18 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-class Create extends Component {
-constructor(props){
-    super(props)
-    this.state={
-        contractor: {
-            conLicense: null,
-            conFirstName: null,
-            conLastName: null,
-          },
+class Update extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            contractor: {
+                conLicense: null,
+                conFirstName: null,
+                conLastName: null,
+              },
+        }
     }
-}
-
-
-/* 
-router.get("/name/:conLastName", (req, res) => {
-    let theName = req.params.conLastName
-    Contractor.find({ conLastName: theName }).then(showName => res.json(showName))
-})
-
-router.post("/new", (req, res) => {
-    Contractor.create(req.body).then(contractor => res.json(contractor))
-})
-
-router.put("/update/:id", (req, res) => {
-    Contractor.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-        .then(update => res.json(update))
-})
-
-router.delete("/delete/:id", (req, res) => {
-    Contractor.findOneAndDelete({ _id: req.params.id }).then(deleted => res.json(deleted))
-})
-
- */
-
+    
 
 handleConFirstName(evt){
     evt.preventDefault();
@@ -55,6 +33,7 @@ this.setState({
 })
 }
 
+
 handleSubmit(evt){
     // const url = `http://localhost:8080/api/contractor/new`;
     evt.preventDefault()
@@ -67,13 +46,12 @@ handleSubmit(evt){
         conLastName: this.state.conLastName,
     })}
 
-    
-
-
     render() {
         return (
             <div>
-                CREATION PAGE
+
+                Update Page
+
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
                 <label>Contractor First Name</label>
 <input name="conFirstName" type="text"onChange={(evt) => this.handleConFirstName(evt)}/>
@@ -83,9 +61,10 @@ handleSubmit(evt){
 <input name="conLicense" type="text" onChange={(evt) => this.handleconLicense(evt)} />
 <input name="" type="submit" />
                 </form>
+                
             </div>
         );
     }
 }
 
-export default Create;
+export default Update;

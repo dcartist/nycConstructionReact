@@ -35,11 +35,11 @@ this.setState({
 }
 
 handleSubmit(evt){
-    // const url = `http://localhost:8080/api/contractor/new`;
+    // const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/new`;
     evt.preventDefault()
     console.log(this.state.conLicense)
     
-    let delId = `http://localhost:8080/api/contractor/delete/`+this.state._id
+    let delId = `https://whispering-bayou-30290.herokuapp.com/api/contractor/delete/`+this.state._id
     // const input = {tweet: {body:  this.state.value}};
     ///delete/:id
     // Axios.delete(delId,

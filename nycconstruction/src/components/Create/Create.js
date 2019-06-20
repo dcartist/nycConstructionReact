@@ -33,11 +33,11 @@ this.setState({
 }
 
 handleSubmit(evt){
-    // const url = `http://localhost:8080/api/contractor/new`;
+    // const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/new`;
     evt.preventDefault()
     console.log(this.state.conLicense)
     // const input = {tweet: {body:  this.state.value}};
-    Axios.post('http://localhost:8080/api/contractor/new',
+    Axios.post('https://whispering-bayou-30290.herokuapp.com/api/contractor/new',
     {
         conLicense: this.state.conLicense,
         conFirstName: this.state.conFirstName,

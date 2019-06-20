@@ -29,9 +29,9 @@ constructor(props){
 
     componentDidMount() {
         // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
-        // const url = `http://localhost:8080/api/job`;
+        // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         const jobid = this.props.match.params.jobId;
-        const url = `http://localhost:8080/api/job/id/`+jobid;
+        const url = `https://whispering-bayou-30290.herokuapp.com/api/job/id/`+jobid;
         
 
 

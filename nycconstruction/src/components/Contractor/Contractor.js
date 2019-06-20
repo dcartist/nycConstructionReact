@@ -17,9 +17,9 @@ constructor(props){
 
     componentDidMount() {
         // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
-        // const url = `http://localhost:8080/api/job`;
+        // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         const jobid = this.props.match.params._id;
-        const url = `http://localhost:8080/api/contractor/id/`+jobid;
+        const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/id/`+jobid;
         
         axios
           .get(url)

@@ -13,7 +13,7 @@ class ContractorList extends Component {
     componentDidMount() {
         // const currency = this.props.match.params.currency;
         // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
-        const url = `http://localhost:8080/api/contractor/`;
+        const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/`;
     
         axios
           .get(url)

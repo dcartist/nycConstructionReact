@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Cormorant+Garamond:400,400i,500,500i,600,600i,700,700i|Cutive+Mono|Exo+2:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Martel:400,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Volkhov:400,400i,700,700i&display=swap');
+
+.navBar {
+    width: 100%;
+    background-color: #002D72;
+    padding: 5px;
+    margin: 0;
+}
+
+.navBar ul li{
+    display: inline;
+    padding: 5px 10px;
+    color: white;
+
+}
+body{
+    margin: 0; 
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.navBar img{
+    width: 90px;
+    vertical-align: middle;
+}
+
+.Logo {
+    font-family: 'Volkhov', serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.Banner {
+    width: 100%;
+    background-color: #0077C8;
+    height: 40px;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 40px;
+    vertical-align: middle;
+    color: white;
+    font-size: 25px;
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 600;
+}
+
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Volkhov', serif;
+font-family: 'Martel', serif;
+font-family: 'Cutive Mono', monospace;
+ */
+

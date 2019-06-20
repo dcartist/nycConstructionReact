@@ -33,13 +33,20 @@ this.setState({
 })
 }
 
+handleID(evt){
+    evt.preventDefault();
+this.setState({
+    _id: evt.target.value
+})
+}
 
 handleSubmit(evt){
     // const url = `http://localhost:8080/api/contractor/new`;
     evt.preventDefault()
     console.log(this.state.conLicense)
+    let updateID = `http://localhost:8080/api/contractor/update/`+this.state._id
     // const input = {tweet: {body:  this.state.value}};
-    Axios.post('http://localhost:8080/api/contractor/new',
+    Axios.put(updateID,
     {
         conLicense: this.state.conLicense,
         conFirstName: this.state.conFirstName,
@@ -53,6 +60,8 @@ handleSubmit(evt){
                 Update Page
 
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
+                    
+                <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input>
                 <label>Contractor First Name</label>
 <input name="conFirstName" type="text"onChange={(evt) => this.handleConFirstName(evt)}/>
 <label>Contractor Last Name</label>

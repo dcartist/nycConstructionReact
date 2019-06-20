@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import './Job.css'
 class Job extends Component {
 constructor(props){
   super(props)
@@ -77,74 +77,64 @@ constructor(props){
       this.props.history.push("/")
       // not a hard direct
     }
-// PULL DATA AND PLACE IT VIA SET STATE
-
-/* 
-getCountryData = e => {
-  e.preventDefault();
-  const apiUrl = "https://restcountries.eu/rest/v2";
-  fetch(`${apiUrl}/name/${this.props.country.name}`)
-    .then(res => res.json())
-    .then(countryData => {
-      const { capital, currencies, languages } = countryData[0];
-      this.setState(prevState => ({
-        capital: capital,
-        currencyCode: currencies[0].code,
-        language: languages[0].name
-      }));
-    });
-};
-
- */
-
-
-
 
       render() {
-//RENDERS THE DATA 
-/* 
-let countryInfo;
-
-    if (this.state.capital) {
-      const { capital, currencyCode, language } = this.state;
-      countryInfo = (
-        <ul>
-          <li>Capital: {capital}</li>
-          <li>Currency Code: {currencyCode}</li>
-          <li>Language: {language}</li>
-        </ul>
-      );
-    } else {
-      countryInfo = (
-        <button onClick={this.getCountryData}>{"Get Country Info"}</button>
-      );
-    }
-
-     */
-
-
 
         return (
-          <div>
+          <div >
+ <div className="Banner">
+               Job information
+               </div>
+          <div className="mod">
+            <p>
 
-            JOB Information:
+          <label>
+            Job ID: 
+          </label>
             {this.props.match.params.jobId}
-            {this.state.contractor.conLastName}
-            {this.state.contractor.conFirstName}
-            {this.state.contractor.conFirstName}
-            {this.state.owner.ownFirstName}
-            {this.state.owner.ownLastName}
+            </p>
+          <p><label>Contractor Last Name: </label>
+            {this.state.contractor.conLastName}</p>
+          <p>
+          <label>Contractor First Name: </label>
+          {this.state.contractor.conFirstName}
+          </p>
+          <p>
+          <label>Property Owner: </label>
+          {this.state.owner.ownFirstName} {this.state.owner.ownLastName}
+          </p>
+          <p>
+
+          <label>Owner Business Name: </label>
             {this.state.owner.ownBusinessName}
+          </p>
+          <p>
+          <label>Borough: </label>
             {this.state.property.borough}
-            {this.state.property.propNum}
-            {this.state.property.street_name}
-            {this.state.property.propType}
-            <p>City</p>
-            {this.state.property.city}
-            <p>Description</p>
-            {this.state.property.jobDescr}
-            <p>address:</p>
+          </p>
+          <p>
+          <label>Address: </label>
             {this.state.property.address}
+          </p>
+          <p>
+          <label>City: </label>
+            {this.state.property.city}
+          </p>
+          <p>
+          <label>Property Type: </label>
+            {this.state.property.propType}
+          </p>
+          <p>
+          <label>Job Description: </label><br></br>
+            <span className="justText">
+            {this.state.property.jobDescr}
+            </span>
+          </p>
+       
+          
+          </div>
+            
+  
             {/* {this.state.property.city} */}
 
             {/* <h1>Bitcoin price in {this.props.match.params.currency}</h1>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import './Mod.css';
 
 class Update extends Component {
     constructor(props){
@@ -55,20 +56,34 @@ handleSubmit(evt){
 
     render() {
         return (
-            <div>
+            <div className="mod">
 
-                Update Page
+                <h3>Update Page</h3>
 
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
-                    
-                <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input>
-                <label>Contractor First Name</label>
+                <p><label>Contractor ID: </label>
+                 <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input></p>
+
+                <p>
+                <label>Contractor First Name: </label>
 <input name="conFirstName" type="text"onChange={(evt) => this.handleConFirstName(evt)}/>
-<label>Contractor Last Name</label>
+                </p>
+                <p>
+                <label>Contractor Last Name: </label>
 <input name="conLastName" type="text" onChange={(evt) => this.handleConLastName(evt)} />
-<label>Contractor License</label>
+                </p>
+                <p>
+                <label>Contractor License: </label>
 <input name="conLicense" type="text" onChange={(evt) => this.handleconLicense(evt)} />
+                </p>
+                <p>
+                    
 <input name="" type="submit" />
+                </p>
+                
+                
+
+
                 </form>
                 
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import './Mod.css';
 
 class Delete extends Component {
 constructor(props){
@@ -57,15 +58,19 @@ handleSubmit(evt){
     
     render() {
         return (
-            <div>
-                Delete Page
+            <div className="mod">
+               <h3> Delete Page</h3>
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
-                   
-                <label>Contractor License</label>
-<input name="conLicense" type="text" onChange={(evt) => this.handleconLicense(evt)} />
-                    by ID:
+                   <p>
+ {/* <label>Contractor License: </label>
+<input name="conLicense" type="text" onChange={(evt) => this.handleconLicense(evt)} /> */}
+                    <label>Contractor ID: </label>
                     <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input>
+                   </p>
+               <p>
+
                     <input type="submit"></input>
+               </p>
                 </form>
             </div>
         );

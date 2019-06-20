@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Update from '../Create/Update'
+import Delete from '../Create/Delete'
 import './Contract.css'
 class Contractor extends Component {
 constructor(props){
@@ -46,21 +47,29 @@ constructor(props){
 
     render() {
         return (
-            <div className="twoCol">
+            <div>
+                <div className="Banner">
+               Contractor Information
+               </div>
+            <div className="twoCol mainDisplay">
                 <div>
-                    <p>
+                    <p> <label>Contractor ID:</label>
                 {this.props.match.params._id} 
                     </p>
                     <p>
+                        <label>Contractor Last Name: </label>
                 {this.state.conLastName}
                     </p>
                     <p>
+                        <label>Contractor First Name: </label>
                 {this.state.conFirstName}
                     </p>
                 </div>
                 <div>
                 <Update></Update>
+                <Delete></Delete>
                 </div>
+            </div>
             </div>
         );
     }

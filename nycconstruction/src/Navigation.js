@@ -9,12 +9,12 @@ class Navigation extends Component {
                 <ul>
                     <li className="Logo"><img src="./new-york-skyline-silhouette.png"></img> NY CONTRACTOR LIST</li>
                     <li><Link to="/">Home </Link></li>
-                    <li><Link to="/about">About</Link></li>
+                    {/* <Link><Link to="/about">About</Link></Link> */}
                     <li><Link to="/jobs">Job Listing </Link></li>
                     <li><Link to="/contractor">Contractors Listing </Link></li>
                     <li><Link to="/create">Create</Link></li>
-                    <li><Link to="/delete">Delete</Link></li>
-                    <li><Link to="/update">update</Link></li>
+                    {/* <li><Link to="/delete">Delete</Link></li>
+                    <li><Link to="/update">update</Link></li> */}
             </ul>                       
                 
             </div>

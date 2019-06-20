@@ -48,6 +48,7 @@ body{
 }
 
 
+
 /* 
 font-family: 'Roboto', sans-serif;
 font-family: 'Exo 2', sans-serif;
@@ -58,3 +59,6 @@ font-family: 'Martel', serif;
 font-family: 'Cutive Mono', monospace;
  */
 
+.bolding{
+    font-weight: 600;
+}

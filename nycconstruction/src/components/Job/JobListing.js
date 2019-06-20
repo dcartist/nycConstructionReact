@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link} from "react-router-dom";
+import './Jobs.css'
 
 class JobListing extends Component {
     constructor(props){
@@ -33,9 +34,18 @@ class JobListing extends Component {
         const jobs = this.state.joblistings.map((jobItems, index) => {
             // return <Country country={country} key={index} />;
             // return <p key={index}>Job ID: {jobItems.jobId} Contractor LastName: {jobItems.contractor.conLastName}</p>
-            return (<p key={index}>Job ID:  <Link to={"/jobs/info/" + jobItems.jobId}>{jobItems.jobId}</Link>  -- Contractor LastName: {jobItems.contractor.conLastName}
-           
-            </p>
+            return (
+            <div key={index} >
+              <ul className="Contractors">
+                <li className="bolding">_id#: {jobItems._id}</li>
+                <li>Contractor Last Name: {jobItems.contractor.conLastName}</li>
+                <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
+                <li>Contractor License: {jobItems.contractor.conLicense}</li>
+                <li><Link to={"/jobs/info/" + jobItems.jobId}>
+                <button> Job #{jobItems.jobId} information </button>
+                </Link></li>
+              </ul>
+            </div>
               
               )
 
@@ -44,12 +54,14 @@ class JobListing extends Component {
           });
         
         return (
-            <div>
-                Job listing
-                {/* {this.state.joblistings} */}
+          <div>
+               <div className="Banner">
+               Job Listing
+               </div>
+                <div className="conCol">
                 {jobs}
-                
             </div>
+           </div>
         );
     }
 }

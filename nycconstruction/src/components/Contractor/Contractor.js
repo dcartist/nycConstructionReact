@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import Update from '../Create/Update'
+import './Contract.css'
 class Contractor extends Component {
 constructor(props){
     super(props)
@@ -19,10 +20,6 @@ constructor(props){
         const jobid = this.props.match.params._id;
         const url = `http://localhost:8080/api/contractor/id/`+jobid;
         
-
-
-    
-    
         axios
           .get(url)
           .then(response => {
@@ -49,13 +46,21 @@ constructor(props){
 
     render() {
         return (
-            <div>
-                information:
-            {this.props.match.params._id}
-            {/* {this.props.match.params.conLastName} */}
-            {this.state.conLastName}
-            {this.state.conFirstName}
-            {/* {this.state.conFirstName} */}
+            <div className="twoCol">
+                <div>
+                    <p>
+                {this.props.match.params._id} 
+                    </p>
+                    <p>
+                {this.state.conLastName}
+                    </p>
+                    <p>
+                {this.state.conFirstName}
+                    </p>
+                </div>
+                <div>
+                <Update></Update>
+                </div>
             </div>
         );
     }

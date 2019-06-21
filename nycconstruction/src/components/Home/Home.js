@@ -14,6 +14,7 @@ class Home extends Component {
                 <img src="./DOB-Logo-KC.png"></img>
                 </div>
                 <div>
+                {this.props.isLoggedIn ? <h4>This is logged in</h4> : ''}
                 <About></About>
                 </div>
             </div>

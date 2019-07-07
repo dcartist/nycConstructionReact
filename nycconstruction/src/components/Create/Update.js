@@ -45,6 +45,7 @@ handleSubmit(evt){
     // const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/new`;
     evt.preventDefault()
     console.log(this.state.conLicense)
+    console.log(this.state._id)
     let updateID = `https://whispering-bayou-30290.herokuapp.com/api/contractor/update/`+this.state._id
     // const input = {tweet: {body:  this.state.value}};
     Axios.put(updateID,

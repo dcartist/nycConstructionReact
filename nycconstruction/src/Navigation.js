@@ -13,8 +13,8 @@ class Navigation extends Component {
                     <li><Link to="/jobs">Job Listing </Link></li>
                     <li><Link to="/contractor">Contractors Listing </Link></li>
                     <li><Link to="/create">Create</Link></li>
-                    <li><Link to="/signup">Sign up</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                    {/* <li><Link to="/signup">Sign up</Link></li>
+                    <li><Link to="/login">Login</Link></li> */}
 
                     {/* <li><Link to="/delete">Delete</Link></li>
                     <li><Link to="/update">update</Link></li> */}

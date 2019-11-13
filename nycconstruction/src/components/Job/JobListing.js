@@ -37,12 +37,12 @@ class JobListing extends Component {
             return (
             <div key={index} >
               <ul className="Contractors">
-                <li className="bolding">_id#: {jobItems._id}</li>
-                <li>Contractor Last Name: {jobItems.contractor.conLastName}</li>
-                <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
-                <li>Contractor License: {jobItems.contractor.conLicense}</li>
+                <li className="bolding"> Job id#: {jobItems._id}</li>
+                {/* <li>Contractor Last Name: {jobItems.contractor.conLastName}</li> */}
+                {/* <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
+                <li>Contractor License: {jobItems.contractor.conLicense}</li> */}
                 <li><Link to={"/jobs/info/" + jobItems.jobId}>
-                <button> Job #{jobItems.jobId} information </button>
+                <button> Job # {jobItems.jobId} information </button>
                 </Link></li>
               </ul>
             </div>

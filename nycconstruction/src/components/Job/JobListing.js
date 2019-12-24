@@ -22,7 +22,8 @@ class JobListing extends Component {
               prevState => ({
                 joblistings: response.data
               }),
-              _ => console.log("get all getting data")
+              // _ => console.log("get all getting data")
+              _ => console.log(this.state.joblistings)
             );
           }).catch(err => {
             console.error(err);
@@ -32,12 +33,19 @@ class JobListing extends Component {
 
     render() {
         const jobs = this.state.joblistings.map((jobItems, index) => {
+          // const lower = jobItems.property.borough
+          // // const upper = lower.replace(/^\w/, c => c.toUpperCase());
+          // const upper = lower.charAt(0).toUpperCase() + lower.substring(1);
+
+
             // return <Country country={country} key={index} />;
             // return <p key={index}>Job ID: {jobItems.jobId} Contractor LastName: {jobItems.contractor.conLastName}</p>
             return (
             <div key={index} >
               <ul className="Contractors">
                 <li className="bolding"> Job id#: {jobItems._id}</li>
+                <li> City: {jobItems.property.city}</li>
+                <li> Borough: {jobItems.property.borough}</li>
                 {/* <li>Contractor Last Name: {jobItems.contractor.conLastName}</li> */}
                 {/* <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
                 <li>Contractor License: {jobItems.contractor.conLicense}</li> */}

@@ -5,6 +5,7 @@ class Job extends Component {
 constructor(props){
   super(props)
   this.state = {
+    jobInformation: null,
     contractor: {
       conLicense: null,
       conFirstName: null,
@@ -33,6 +34,7 @@ constructor(props){
         const jobid = this.props.match.params.jobId;
         const url = `https://whispering-bayou-30290.herokuapp.com/api/job/id/`+jobid;
         
+        
 
 
     
@@ -42,12 +44,22 @@ constructor(props){
           .then(response => {
             // let newPrice = response.data.bpi[currency].rate; //Axios used here
             let newjobId = response.data
+            let jobDescription = null
+            if (newjobId[0].property.jobDescr.length === 0){
+              jobDescription = "No Job Description is available"
+            }
+            else {
+              jobDescription = newjobId[0].property.jobDescr
+            }
             console.log(newjobId)
             console.log(this.props.match.params)
             console.log(newjobId[0].contractor)
             // this.props.setPrice(newPrice);
             this.props.setjobId(newjobId)
+            console.log(newjobId[0].property.jobDescr.length)
+            console.log(newjobId[0])
             this.setState(PreviousState => ({
+              jobInformation: newjobId[0],
               contractor: {
                 conLicense: newjobId[0].contractor.conLicense,
                 conFirstName: newjobId[0].contractor.conFirstName,
@@ -64,8 +76,8 @@ constructor(props){
                 street_name: newjobId[0].property.street_name,
                 propType: newjobId[0].property.propType,
                 city: newjobId[0].property.city,
-                jobDescr: newjobId[0].property.jobDescr,
-                address: newjobId[0].property.address
+                address: newjobId[0].property.address,
+                jobDescr: jobDescription
               },
             }))
           })
@@ -79,7 +91,7 @@ constructor(props){
     }
 
       render() {
-
+     
         return (
           <div >
  <div className="Banner">

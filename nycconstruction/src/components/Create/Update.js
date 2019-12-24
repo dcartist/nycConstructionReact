@@ -63,7 +63,7 @@ handleSubmit(evt){
 
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
                 <p><label>Contractor ID: </label>
-                 <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input></p>
+        <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input></p>
 
                 <p>
                 <label>Contractor First Name: </label>

@@ -34,11 +34,6 @@ constructor(props){
         const jobid = this.props.match.params.jobId;
         const url = `https://whispering-bayou-30290.herokuapp.com/api/job/id/`+jobid;
         
-        
-
-
-    
-    
         axios
           .get(url)
           .then(response => {

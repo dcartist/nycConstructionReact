@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Map from '../Map/Map'
 import './Job.css'
 class Job extends Component {
 constructor(props){
@@ -93,7 +94,8 @@ constructor(props){
  <div className="Banner">
                Job information
                </div>
-          <div className="mod">
+               <div className="jobBody">
+               <div className="mod">
             <p>
 
           <label>
@@ -141,6 +143,12 @@ constructor(props){
        
           
           </div>
+<div>
+  <Map newLocation ={this.state.property.address}></Map>
+
+</div>
+               </div>
+          
             
   
             {/* {this.state.property.city} */}

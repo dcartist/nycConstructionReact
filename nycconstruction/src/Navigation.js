@@ -8,7 +8,7 @@ class Navigation extends Component {
         return (
             <div className="navBar">
                 <ul>
-                    <li className="Logo"><img src={Logo} alt="NYC contractor logo"></img> NY CONTRACTOR LIST</li>
+                    <li className="Logo"><img src={Logo} alt="NYC contractor logo"></img> NY CL</li>
                     {/* <li className="Logo"><img src="./new-york-skyline-silhouette.png"></img> NY CONTRACTOR LIST</li> */}
                     <li><Link to="/">Home </Link></li>
                     <Link><Link to="/about">About</Link></Link>

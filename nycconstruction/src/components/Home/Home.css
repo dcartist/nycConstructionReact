@@ -7,11 +7,14 @@
 
 .nycBackground {
     /* background-image: url('../../Images/the-man-does-repair-in-the-house-twists-a-drill-the-self-tapping-screw_t20_lWeb08.jpg'); */
-    background-image: url('../../Images/man-laying-oak-wooden-floor-in-the-living-room_t20_Ky1jdV.jpg');
+    /* background-image: url('../../Images/man-laying-oak-wooden-floor-in-the-living-room_t20_Ky1jdV.jpg'); */
+    background-image: url('../../Images/luxury-old-storefront-in-remodeling-in-new-york-city-america-manhattan-nyc-new-york-new-york-city-usa_t20_RzVWpa.jpg');
     /* background-position: c; */
     background-repeat: no-repeat;
+    background-position-y: center;
     background-size: cover;
-    height: 600px;
+    height: 90vh;
+    /* height: 600px; */
     display: flex;
     /* filter: blur(2px); */
     /* -webkit-filter: contrast(1); */

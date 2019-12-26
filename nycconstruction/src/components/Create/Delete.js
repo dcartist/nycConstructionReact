@@ -12,6 +12,7 @@ constructor(props){
             conFirstName: null,
             conLastName: null,
           },
+              idInfo:""
     }
 }
 
@@ -39,7 +40,8 @@ handleSubmit(evt){
     evt.preventDefault()
     console.log(this.state.conLicense)
     
-    let delId = `https://whispering-bayou-30290.herokuapp.com/api/contractor/delete/`+this.state._id
+    // let delId = `https://whispering-bayou-30290.herokuapp.com/api/contractor/delete/`+this.state._id
+    let delId = `https://whispering-bayou-30290.herokuapp.com/api/contractor/delete/`+this.props.idInfo
     // const input = {tweet: {body:  this.state.value}};
     ///delete/:id
     // Axios.delete(delId,
@@ -65,7 +67,7 @@ handleSubmit(evt){
  {/* <label>Contractor License: </label>
 <input name="conLicense" type="text" onChange={(evt) => this.handleconLicense(evt)} /> */}
                     <label>Contractor ID: </label>
-                    <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input>
+                    <input type="text" name = "ID" value={this.props.idInfo} placeholder={this.props.idInfo} onChange={(evt) => this.handleID(evt)}></input>
                    </p>
                <p>
 

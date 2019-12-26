@@ -7,10 +7,10 @@ class Contractor extends Component {
 constructor(props){
     super(props)
     this.state ={
+        _id: this.props.match.params._id,
         conLicense: null,
       conFirstName: null,
-      conLastName: null,
-      _id: null,
+      conLastName: null
     }
 }
 
@@ -27,9 +27,9 @@ constructor(props){
             // let newPrice = response.data.bpi[currency].rate; //Axios used here
             let newjobId = response.data
             console.log(newjobId)
-            console.log(this.props.match.params)
-            console.log(newjobId)
-            console.log("test")
+            // console.log(this.props.match.params)
+            // console.log(newjobId)
+            // console.log("test")
             // this.props.setPrice(newPrice);
             // this.props.setContractInfo(newjobId)
             this.setState(PreviousState => ({
@@ -57,6 +57,10 @@ constructor(props){
                 {this.props.match.params._id} 
                     </p>
                     <p>
+                        <label>Contractor License #: </label>
+                {this.state.conLicense}
+                    </p>
+                    <p>
                         <label>Contractor Last Name: </label>
                 {this.state.conLastName}
                     </p>
@@ -66,8 +70,8 @@ constructor(props){
                     </p>
                 </div>
                 <div>
-                <Update></Update>
-                <Delete></Delete>
+                <Update idInfo={this.props.match.params._id}></Update>
+                <Delete idInfo={this.props.match.params._id}></Delete>
                 </div>
             </div>
             </div>

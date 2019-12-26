@@ -6,11 +6,13 @@ class Update extends Component {
     constructor(props){
         super(props)
         this.state={
+            _id: "",
             contractor: {
                 conLicense: null,
                 conFirstName: null,
                 conLastName: null,
               },
+              idInfo:""
         }
     }
     
@@ -44,9 +46,9 @@ this.setState({
 handleSubmit(evt){
     // const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/new`;
     evt.preventDefault()
-    console.log(this.state.conLicense)
-    console.log(this.state._id)
-    let updateID = `https://whispering-bayou-30290.herokuapp.com/api/contractor/update/`+this.state._id
+    // console.log(this.state.conLicense)
+    // console.log(this.props.idInfo)
+    let updateID = `https://whispering-bayou-30290.herokuapp.com/api/contractor/update/`+this.props.idInfo
     // const input = {tweet: {body:  this.state.value}};
     Axios.put(updateID,
     {
@@ -56,6 +58,7 @@ handleSubmit(evt){
     })}
 
     render() {
+        console.log(this.props.idInfo)
         return (
             <div className="mod">
 
@@ -63,7 +66,7 @@ handleSubmit(evt){
 
                 <form onSubmit={(evt) => this.handleSubmit(evt)}>
                 <p><label>Contractor ID: </label>
-        <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)}></input></p>
+                <input type="text" name = "ID" onChange={(evt) => this.handleID(evt)} value={this.props.idInfo} placeholder={this.props.idInfo}></input></p>
 
                 <p>
                 <label>Contractor First Name: </label>

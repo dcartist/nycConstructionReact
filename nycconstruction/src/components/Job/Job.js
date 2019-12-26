@@ -5,6 +5,7 @@ class Job extends Component {
 constructor(props){
   super(props)
   this.state = {
+    _id: null,
     jobInformation: null,
     contractor: {
       conLicense: null,

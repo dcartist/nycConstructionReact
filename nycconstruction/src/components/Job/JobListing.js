@@ -85,6 +85,7 @@ class JobListing extends Component {
                <div className="Banner">
                Job Listing
                </div>
+               <div className="centeredTable">
                <table>
                  <thead className="tableHeader">
                  <td>Job ID #</td>
@@ -94,6 +95,8 @@ class JobListing extends Component {
                  </thead>
                  {jobs}
                </table>
+               </div>
+               
 
                 {/* <div className="conCol">
                    {jobs}

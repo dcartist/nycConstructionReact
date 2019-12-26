@@ -14,9 +14,7 @@ constructor(props){
     }
 }
 
-
     componentDidMount() {
-        // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         const jobid = this.props.match.params._id;
         const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/id/`+jobid;
@@ -29,7 +27,6 @@ constructor(props){
             console.log(newjobId)
             // console.log(this.props.match.params)
             // console.log(newjobId)
-            // console.log("test")
             // this.props.setPrice(newPrice);
             // this.props.setContractInfo(newjobId)
             this.setState(PreviousState => ({

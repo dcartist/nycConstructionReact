@@ -16,7 +16,6 @@ class Update extends Component {
         }
     }
     
-
 handleConFirstName(evt){
     evt.preventDefault();
 this.setState({

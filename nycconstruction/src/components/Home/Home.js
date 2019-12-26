@@ -5,7 +5,11 @@ class Home extends Component {
     render() {
         return (
             <div>
-<div className="Banner">
+{/* <div className="Banner"> */}
+<div>
+    <div className="nycBackground">
+        .
+    </div>
                About NYC Contractor APP
                </div>
             <div className="twoCol">
@@ -15,7 +19,7 @@ class Home extends Component {
                 </div>
                 <div>
                 {this.props.isLoggedIn ? <h4>This is logged in</h4> : ''}
-                <About></About>
+                {/* <About></About> */}
                 </div>
             </div>
             </div>

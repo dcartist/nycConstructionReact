@@ -4,3 +4,14 @@
     vertical-align: middle;
 
 }
+
+.nycBackground {
+    /* background-image: url('../../Images/the-man-does-repair-in-the-house-twists-a-drill-the-self-tapping-screw_t20_lWeb08.jpg'); */
+    background-image: url('../../Images/man-laying-oak-wooden-floor-in-the-living-room_t20_Ky1jdV.jpg');
+    /* background-position: c; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    margin: 0;
+}

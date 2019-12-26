@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css'
+import FirstArrow from '../../Images/iconmonstr-arrow-24-240.png'
+// import Icon from '@material-ui/core/Icon';
 import About from '../About/About'
 class Home extends Component {
     render() {
@@ -8,9 +10,9 @@ class Home extends Component {
 {/* <div className="Banner"> */}
 <div>
     <div className="nycBackground">
-        .
+    <h1> NYC Contractor APP <img src={FirstArrow}></img><img src={FirstArrow}></img></h1>
     </div>
-               About NYC Contractor APP
+               
                </div>
             <div className="twoCol">
                 <div>
@@ -18,10 +20,10 @@ class Home extends Component {
                 <img src="./DOB-Logo-KC.png"></img>
                 </div>
                 <div>
-                {this.props.isLoggedIn ? <h4>This is logged in</h4> : ''}
-                {/* <About></About> */}
                 </div>
             </div>
+                {/* {this.props.isLoggedIn ? <h4>This is logged in</h4> : ''} */}
+                {/* <About></About> */}
             </div>
         );
     }

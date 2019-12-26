@@ -25,3 +25,17 @@
         text-align: justify;
         width: 300px;
     }
+
+    td {
+        font-size: 12px;
+        text-align: center;
+    }
+    .tablePadding {
+        padding: 0 4px;
+        font-weight: bold;
+
+    }
+    .tableHeader{
+        font-size: 19px;
+        font-weight: 700;
+    }

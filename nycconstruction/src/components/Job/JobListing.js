@@ -33,27 +33,46 @@ class JobListing extends Component {
 
     render() {
         const jobs = this.state.joblistings.map((jobItems, index) => {
-          // const lower = jobItems.property.borough
-          // // const upper = lower.replace(/^\w/, c => c.toUpperCase());
-          // const upper = lower.charAt(0).toUpperCase() + lower.substring(1);
-
-
-            // return <Country country={country} key={index} />;
-            // return <p key={index}>Job ID: {jobItems.jobId} Contractor LastName: {jobItems.contractor.conLastName}</p>
+        
             return (
-            <div key={index} >
-              <ul className="Contractors">
-                <li className="bolding"> Job id#: {jobItems._id}</li>
-                <li> City: {jobItems.property.city}</li>
-                <li> Borough: {jobItems.property.borough}</li>
-                {/* <li>Contractor Last Name: {jobItems.contractor.conLastName}</li> */}
-                {/* <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
-                <li>Contractor License: {jobItems.contractor.conLicense}</li> */}
-                <li><Link to={"/jobs/info/" + jobItems.jobId}>
-                <button> Job # {jobItems.jobId} information </button>
-                </Link></li>
-              </ul>
-            </div>
+              <tr key={index}>
+                <td className="tablePadding">
+                <b>{jobItems._id}</b>
+                </td>
+                <td>
+                {jobItems.property.address}
+                </td>
+                <td>
+                  {jobItems.property.city}
+                </td>
+                <td>
+                {jobItems.property.borough}
+                </td>
+                <td>
+
+                </td>
+                <td>
+                <Link to={"/jobs/info/" + jobItems.jobId}><button> Job # {jobItems.jobId} information </button>
+                </Link>
+                </td>
+              </tr>
+
+
+
+
+            // <div key={index} >
+            //   <ul className="Contractors">
+            //     <li className="bolding"> Job id#: {jobItems._id}</li>
+            //     <li> City: {jobItems.property.city}</li>
+            //     <li> Borough: {jobItems.property.borough}</li>
+            //     {/* <li>Contractor Last Name: {jobItems.contractor.conLastName}</li> */}
+            //     {/* <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
+            //     <li>Contractor License: {jobItems.contractor.conLicense}</li> */}
+            //     <li><Link to={"/jobs/info/" + jobItems.jobId}>
+            //     <button> Job # {jobItems.jobId} information </button>
+            //     </Link></li>
+            //   </ul>
+            // </div>
               
               )
 
@@ -66,9 +85,19 @@ class JobListing extends Component {
                <div className="Banner">
                Job Listing
                </div>
-                <div className="conCol">
-                {jobs}
-            </div>
+               <table>
+                 <thead className="tableHeader">
+                 <td>Job ID #</td>
+                   <td>Address</td>
+                   <td>City</td>
+                   <td>Borough</td>
+                 </thead>
+                 {jobs}
+               </table>
+
+                {/* <div className="conCol">
+                   {jobs}
+            </div> */}
            </div>
         );
     }

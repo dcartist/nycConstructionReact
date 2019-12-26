@@ -10,11 +10,11 @@ class Navigation extends Component {
                 <ul>
                     <li className="Logo"><img src={Logo} alt="NYC contractor logo"></img> NY CL</li>
                     {/* <li className="Logo"><img src="./new-york-skyline-silhouette.png"></img> NY CONTRACTOR LIST</li> */}
-                    <li><Link to="/">Home </Link></li>
-                    <Link><Link to="/about">About</Link></Link>
-                    <li><Link to="/jobs">Job Listing </Link></li>
-                    <li><Link to="/contractor">Contractors Listing </Link></li>
-                    <li><Link to="/create">Create</Link></li>
+                    <li> ➤ <Link to="/">Home </Link></li>
+                    <li> ➤ <Link to="/about">About</Link></li>
+                    <li> ➤ <Link to="/jobs">Job Listing </Link></li>
+                    <li> ➤ <Link to="/contractor">Contractors Listing </Link></li>
+                    <li> ➤ <Link to="/create">Create</Link></li>
                     {/* <li><Link to="/signup">Sign up</Link></li>
                     <li><Link to="/login">Login</Link></li> */}
 

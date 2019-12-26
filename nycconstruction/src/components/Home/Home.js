@@ -11,20 +11,9 @@ class Home extends Component {
 {/* <div className="Banner"> */}
 <div>
     <div className="nycBackground">
-    <h1> NY Contractor List <img src={FirstArrow}></img> <img src={FirstArrow}></img> <img src={ConstructionPlans}></img></h1>
+    <h1> NY Contractor List <img src={FirstArrow} alt="Arrow Image"></img> <img src={FirstArrow} alt="Arrow Image"></img> <img src={ConstructionPlans} alt="Plans Image"></img></h1>
     </div>
-               
                </div>
-               {/* <img src="./DOB-Logo-KC.png"></img> */}
-            {/* <div className="twoCol">
-                <div>
-
-                <div>
-                </div>
-                </div>
-            </div> */}
-                {/* {this.props.isLoggedIn ? <h4>This is logged in</h4> : ''} */}
-                {/* <About></About> */}
             </div>
         );
     }

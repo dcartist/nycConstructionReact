@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Map from '../Map/Map'
+import {Link} from 'react-router-dom'
 import './Job.css'
 class Job extends Component {
 constructor(props){
@@ -83,7 +84,7 @@ constructor(props){
           });
       }
     goHomeViaHistory = () => {
-      this.props.history.push("/")
+      this.props.history.push("/jobs")
       // not a hard direct
     }
 
@@ -93,54 +94,26 @@ constructor(props){
           <div >
  <div className="Banner">
                Job information
+               <Link onClick={this.goHomeViaHistory}><button> Return to listing</button></Link>
                </div>
                <div className="jobBody">
                <div className="mod">
-            <p>
-
-          <label>
-            Job ID: 
-          </label>
-            {this.props.match.params.jobId}
-            </p>
-          <p><label>Contractor Last Name: </label>
-            {this.state.contractor.conLastName}</p>
-          <p>
-          <label>Contractor First Name: </label>
-          {this.state.contractor.conFirstName}
-          </p>
-          <p>
-          <label>Property Owner: </label>
-          {this.state.owner.ownFirstName} {this.state.owner.ownLastName}
-          </p>
-          <p>
-
-          <label>Owner Business Name: </label>
-            {this.state.owner.ownBusinessName}
-          </p>
-          <p>
-          <label>Borough: </label>
-            {this.state.property.borough}
-          </p>
-          <p>
-          <label>Address: </label>
-            {this.state.property.address}
-          </p>
-          <p>
-          <label>City: </label>
-            {this.state.property.city}
-          </p>
-          <p>
-          <label>Property Type: </label>
-            {this.state.property.propType}
-          </p>
-          <p>
-          <label>Job Description: </label><br></br>
-            <span className="justText">
-            {this.state.property.jobDescr}
-            </span>
-          </p>
-       
+         
+<ul>
+  <li><span>Job ID:</span> {this.props.match.params.jobId}</li>
+  <li><span>Contractor Last Name:</span> {this.state.contractor.conLastName}</li>
+  <li><span>Contractor First Name:</span> {this.state.contractor.conFirstName}</li>
+  <li><span>Property Owner:</span> {this.state.owner.ownFirstName} {this.state.owner.ownLastName}</li>
+  <li><span>Owner Business Name:</span> {this.state.owner.ownBusinessName}</li>
+  <li><span>Borough:</span> {this.state.property.borough}</li>
+  <li><span>Address:</span>  {this.state.property.address}</li>
+  <li><span>City:</span> {this.state.property.city}</li>
+  <li><span>Property Type:</span> {this.state.property.propType}</li>
+  <li><span>Job Description:</span> {this.state.property.jobDescr}</li>
+  {/* <li><span></span></li> */}
+ 
+</ul>
+          
           
           </div>
 <div>

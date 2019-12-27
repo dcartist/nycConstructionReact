@@ -27,6 +27,7 @@ class Map extends Component {
               src={mapUrl}
               className="mapDiv"
               title="map"
+              
             ></iframe>
           </div>
         );

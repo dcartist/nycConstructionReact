@@ -49,3 +49,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.Banner button {
+    width: 140px;
+    font-size: 12px;
+    margin: 0 0 0 15px;
+}
+
+.mod ul {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mod li {
+    padding-bottom: 5px;
+}
+
+.mod ul span {
+    font-weight: 800;
+}

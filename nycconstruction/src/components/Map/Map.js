@@ -14,7 +14,8 @@ class Map extends Component {
         let Location = nyplace.split(" ").join("+");
         const mapUrl = encodeURI(
         //   `https://www.google.com/maps/embed/v1/place?key=AIzaSyAfsJhoKYmk8rJBonKzUTpurtDLjMLuZbk=${this.state.newLocation}`
-          `https://www.google.com/maps/embed/v1/place?key=AIzaSyAfsJhoKYmk8rJBonKzUTpurtDLjMLuZbk&q=${Location}`
+          // `https://www.google.com/maps/embed/v1/place?key=AIzaSyAfsJhoKYmk8rJBonKzUTpurtDLjMLuZbk&q=${Location}`
+          `https://www.google.com/maps/embed/v1/place?key=AIzaSyCbArgLQ7D3YmwsWKPDmhj5xQm3vz4sg6s&q=${Location}`
          
         );
         console.log(mapUrl);

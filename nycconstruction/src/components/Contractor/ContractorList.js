@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link} from "react-router-dom";
 import './Contract.css'
+import JwPagination from 'jw-react-pagination';
 
 class ContractorList extends Component {
     constructor(props){
         super(props)
         this.state={
-            contractosList: []
+            contractosList: [],
+            pageOfItems: []
         }
     }
     componentDidMount() {
-        // const currency = this.props.match.params.currency;
-        // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         const url = `https://whispering-bayou-30290.herokuapp.com/api/contractor/`;
-    
         axios
           .get(url)
           .then(response => {
@@ -30,10 +29,14 @@ class ContractorList extends Component {
       }
 
 
+      onChangePage = (pageOfItems) => {
+        // update local state with new page of items
+        this.setState({ pageOfItems });
+    }
 
     render() {
 
-        const contract = this.state.contractosList.map((jobItems, index) => {
+        const contract = this.state.pageOfItems.map((jobItems, index) => {
       
             return (
             <div key={index}>
@@ -56,6 +59,8 @@ class ContractorList extends Component {
                <div className="Banner">
                Contractor's List
                </div>
+               <div className="Pagination"> <JwPagination items={this.state.contractosList} onChangePage={this.onChangePage} pageSize={30} /></div>
+
                 <div className="conCol">
                 {contract}
             </div>

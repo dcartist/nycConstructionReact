@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link} from "react-router-dom";
 import './Jobs.css'
+import JwPagination from 'jw-react-pagination';
 
 class JobListing extends Component {
     constructor(props){
         super(props)
         this.state={
-            joblistings: []
+            joblistings: [],
+            pageOfItems: []
         }
     }
     componentDidMount() {
-        // const currency = this.props.match.params.currency;
-        // const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
         const url = `https://whispering-bayou-30290.herokuapp.com/api/job`;
     
         axios
@@ -30,9 +30,12 @@ class JobListing extends Component {
           });
       }
 
-
+      onChangePage = (pageOfItems) => {
+        // update local state with new page of items
+        this.setState({ pageOfItems });
+    }
     render() {
-        const jobs = this.state.joblistings.map((jobItems, index) => {
+        const jobs = this.state.pageOfItems.map((jobItems, index) => {
         
             return (
               <tr key={index}>
@@ -56,36 +59,20 @@ class JobListing extends Component {
                 </Link>
                 </td>
               </tr>
-
-
-
-
-            // <div key={index} >
-            //   <ul className="Contractors">
-            //     <li className="bolding"> Job id#: {jobItems._id}</li>
-            //     <li> City: {jobItems.property.city}</li>
-            //     <li> Borough: {jobItems.property.borough}</li>
-            //     {/* <li>Contractor Last Name: {jobItems.contractor.conLastName}</li> */}
-            //     {/* <li>Contractor First Name: {jobItems.contractor.conFirstName}</li>
-            //     <li>Contractor License: {jobItems.contractor.conLicense}</li> */}
-            //     <li><Link to={"/jobs/info/" + jobItems.jobId}>
-            //     <button> Job # {jobItems.jobId} information </button>
-            //     </Link></li>
-            //   </ul>
-            // </div>
               
               )
 
-
-            
           });
         
         return (
           <div>
                <div className="Banner">
                Job Listing
+               
                </div>
+               <div className="Pagination"> <JwPagination items={this.state.joblistings} onChangePage={this.onChangePage} pageSize={30} /></div>
                <div className="centeredTable">
+               
                <table>
                  <thead className="tableHeader">
                  <td>Job ID #</td>

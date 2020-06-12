@@ -1,4 +1,8 @@
-
+.Pagination{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
 .mainDisplay{
     margin-left: 3em; 
 }
@@ -67,4 +71,8 @@
 
 .mod ul span {
     font-weight: 800;
+}
+
+.centeredTable{
+    padding-bottom: 30px;
 }

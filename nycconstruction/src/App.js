@@ -14,7 +14,7 @@ import About from './components/About/About'
 import Create from './components/Create/Create'
 import Delete from './components/Create/Delete'
 import Update from './components/Create/Update'
-
+import Loader from './components/Loader/Loader'
 
 import Navigation from './Navigation'
 import {Route, Link, Switch, Redirect} from "react-router-dom";
@@ -109,6 +109,7 @@ handleLogIn(e) {
       </header>
       <Switch>
       <Route path="/" exact component={Home}/>
+      <Route path="/loader" component={Loader}/>
       <Route path="/create"  component={Create}/>
       <Route path="/signup"  component={SignUpForm} />
       <Route path="/login"  component={LogInForm}/>

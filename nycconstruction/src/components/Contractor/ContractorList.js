@@ -63,7 +63,7 @@ return <Loader></Loader>
              <div className="Banner">
              Contractor's List
              </div>
-             <div className="Pagination"> <JwPagination items={this.state.contractosList} onChangePage={this.onChangePage} pageSize={30} /></div>
+             <div className="Pagination"> <JwPagination items={this.state.contractosList} onChangePage={this.onChangePage} pageSize={32} /></div>
 
               <div className="conCol">
               {contract}

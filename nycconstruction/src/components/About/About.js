@@ -5,8 +5,10 @@ class About extends Component {
         return (
             <div className="theBox">             
 <h4>
-            This app is based of Project 2's NYC Contract Job Application.
+            This app is based of Mongo/Express Project: NYC Contract Job Application.
 </h4>
+
+This is a full MERN (MONGO, Express, ReactJS and Node) App.
 
 <p> Previous Project:<br></br> <a rel="noopener noreferrer" href="https://github.com/dcartist/nycConstructionApp" target="_blank">https://github.com/dcartist/nycConstructionApp</a>
 </p>

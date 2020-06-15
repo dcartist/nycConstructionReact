@@ -11,23 +11,51 @@
    }
 
    button{
-       width: 100px;
+       width: 140px;
        /* height: 20px; */
-       padding: 5px;
+       /* padding: 5px; */
        margin: 5px;
-       background-color: #0077C8;
-       color: white;
+       /* background-color: #0077C8; */
+       /* color: white;  */
        box-shadow: 2px 2px 5px rgba(71, 71, 71, 0.432);
-       font-family: 'Exo 2', sans-serif;
-       font-weight: 600;
+       /* font-family: 'Exo 2', sans-serif; */
+       font-size: 10px;
+       /* font-weight: 600; */
    }
 
    .jobMain{
       text-align: center;
+    
    }
 
+   .jobCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+   }
 
-   label {
+   .jobCard div:first-child {
+       font-weight: 600;
+   }
+
+   .jobCard div:nth-child(2){
+       font-size: 14px;
+   }
+
+   .jobCard div:nth-last-child(3){
+    font-weight: 700;
+    font-size: 12px;
+   }
+
+   /* label {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
+} */
+
+hr {
+    width: 3em;
+    height: 3px;
+    background-color: black;
 }

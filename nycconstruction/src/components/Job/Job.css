@@ -76,3 +76,12 @@
 .centeredTable{
     padding-bottom: 30px;
 }
+
+.jobCard {
+    text-align: center;
+}
+
+.JobBase {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

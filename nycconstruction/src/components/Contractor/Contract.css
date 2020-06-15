@@ -7,7 +7,13 @@
  list-style-type: none;
   margin: 5px, 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+#contractorJob  {
+    padding-bottom: 4px;
+   }
 
 .conCol {
     display: grid;
@@ -21,10 +27,10 @@
     font-size: 13px;
     /* border: 1px solid rgb(105, 105, 105); */
     padding: 10px;
-    margin: 5px;
+    margin: 15px;
     /* box-sizing: border-box; */
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(71, 71, 71, 0.432);
+    /* box-shadow: 2px 2px 5px rgba(71, 71, 71, 0.432); */
 }
 .twoCol{
 display: grid;
@@ -35,6 +41,14 @@ grid-template-columns: repeat(2 1fr);
     margin-left: 3em; 
 }
 
+.Contractors li:first-child{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.Contractors li:nth-child(2){
+    font-size: 16px;
+}
 .mod{
     padding-left: 3em;
     }
@@ -46,4 +60,9 @@ grid-template-columns: repeat(2 1fr);
         font-family: 'Cutive Mono', monospace;
         font-size: 16px;
         font-weight: 700;
+    }
+
+    .contractorJobs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }

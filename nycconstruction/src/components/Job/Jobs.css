@@ -10,6 +10,10 @@
        padding: 5px 15px;
    }
 
+ /* .contractorJob div{
+     padding-bottom: 10px;
+ } */
+
    button{
        width: 140px;
        /* height: 20px; */
@@ -17,7 +21,9 @@
        margin: 5px;
        /* background-color: #0077C8; */
        /* color: white;  */
-       box-shadow: 2px 2px 5px rgba(71, 71, 71, 0.432);
+       border: 0;
+       box-shadow: 2px 2px 5px rgba(71, 71, 71, 0.918);
+       
        /* font-family: 'Exo 2', sans-serif; */
        font-size: 10px;
        /* font-weight: 600; */
@@ -28,6 +34,9 @@
     
    }
 
+   .JobBase, .Pagination{
+       padding-top: 25px;
+   }
    .jobCard{
     display: flex;
     justify-content: center;
@@ -58,4 +67,8 @@ hr {
     width: 3em;
     height: 3px;
     background-color: black;
+}
+
+#listingButton{
+    font-size: 12px;
 }

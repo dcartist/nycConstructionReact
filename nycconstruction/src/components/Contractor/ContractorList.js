@@ -10,6 +10,7 @@ class ContractorList extends Component {
         super(props)
         this.state={
             contractosList: [],
+            finalResults:[],
             pageOfItems: []
         }
     }
@@ -24,6 +25,20 @@ class ContractorList extends Component {
               }),
               _ => console.log("get all getting data")
             );
+            let outcomes = []
+            const map = new Map();
+            for (const item of response.data) {
+                if(!map.has(item.conLicense)){
+                    map.set(item.conLicense, true);    // set any value to Map
+                    outcomes.push({
+                        item
+                    });
+                }
+              this.setState({finalResults: outcomes})
+            }
+            console.log("this is after map")
+            console.log(this.state.finalResults)
+
           }).catch(err => {
             console.error(err);
           });
@@ -40,16 +55,20 @@ class ContractorList extends Component {
 return <Loader></Loader>
       }else {
 
+
+        // var filteredArray = this.state.contractosList.filter(function(item, pos){
+        //   return arr.indexOf(item)== pos; 
+        // });
+        
+
         const contract = this.state.pageOfItems.map((jobItems, index) => {
-      
           return (
           <div key={index}>
               <ul className="Contractors">
-                  <li>
-                  ID:  <Link to={"/contractor/info/" + jobItems._id}>{jobItems._id}</Link> 
-                  </li>
-                  <li>Contractor LastName: {jobItems.conLastName}</li>
-                  <li>Contractor FirstName: {jobItems.conFirstName} </li>
+
+                  <li>Contractor: </li>
+                  <li id="contractorJob">{jobItems.conFirstName} {jobItems.conLastName}</li>
+                 <Link to={"/contractor/info/" + jobItems._id}><button>More info</button></Link> 
               </ul>
         
           </div>
@@ -63,6 +82,7 @@ return <Loader></Loader>
              <div className="Banner">
              Contractor's List
              </div>
+             {/* <div className="Pagination"> <JwPagination items={this.state.finalResults} onChangePage={this.onChangePage} pageSize={32} /></div> */}
              <div className="Pagination"> <JwPagination items={this.state.contractosList} onChangePage={this.onChangePage} pageSize={32} /></div>
 
               <div className="conCol">
